@@ -1,7 +1,7 @@
 let dictionary = [["lots", "1"], ["of", "2"], ["words", "3"], ["from", "4"], 
 ["vocabulary", "5"], ["picked", "6"], ["by", "7"], ["me", "8"]]
 /**
- * The main game "loop", called when the script is first loaded
+ * The first game function, called when the script is first loaded
  * and after the user's answer has been processed
  */
 function pickWord () {
@@ -14,7 +14,7 @@ pickWord();
 console.log(pickedWord);
 
 /**
- * create divs in base of the number of letters with their respective letters in them.
+ * Create divs in base of the number of letters with their respective letters in them.
  */
  let boxes = '';
  for (let i = 0; i < pickedWord.length; i++) {
@@ -28,19 +28,27 @@ console.log(pickedWord);
  console.log(boxes);
 document.getElementById("game-area").innerHTML = boxes;
 
+/**
+ * This function shows the letter in its position if correct 
+ * and call change the function incrementWrongAnswer if wrong
+ */
 
-// Function show the letter in its position if correct, change the image if wrong
-function keyPressed(event) {
-    for (i = 0; i < pickedWord.length; i++) 
-    if (event.key === pickedWord[i]) { 
-        let letter = document.getElementsByTagName("h2")[i];
-        letter.style.visibility = "visible";
-    } else {
-        incrementWrongAnswer()
-    }
-}
-function incrementWrongAnswer() {
-    console.log("no")
-}
+    function keyPressed(event) {
+        for (i = 0; i < pickedWord.length; i++) {
+    
+           if (pickedWord.includes(event.key)) { 
+              console.log("true");
+              if (event.key === pickedWord[i]) { 
+              letters[i].style.visibility = "visible";
+              }
+            } else {
+            incrementWrongAnswer()
+            } 
+        }
+    };
+    // This function change the image every time the answer is wrong
+    function incrementWrongAnswer() {
+        console.log("no")
+    };
 
    
