@@ -32,23 +32,39 @@ document.getElementById("game-area").innerHTML = boxes;
  * This function shows the letter in its position if correct 
  * and call change the function incrementWrongAnswer if wrong
  */
-
-    function keyPressed(event) {
-        for (i = 0; i < pickedWord.length; i++) {
+ function keyPressed(event) {
+     for (i = 0; i < pickedWord.length; i++) {
     
-           if (pickedWord.includes(event.key)) { 
+       if (pickedWord.includes(event.key)) { 
               console.log("true");
-              if (event.key === pickedWord[i]) { 
+           if (event.key === pickedWord[i]) { 
               letters[i].style.visibility = "visible";
               }
-            } else {
-            incrementWrongAnswer()
-            } 
-        }
+        } else {
+          incrementWrongAnswer()
+        } 
+      }
     };
     // This function change the image every time the answer is wrong
     function incrementWrongAnswer() {
         console.log("no")
     };
 
-   
+   // This function tells the user when the game is won
+   function victory(event) {
+    let results = [];
+      for (i = 0; i < letters.length; i++) {
+          
+          if (letterContainer[i].style.backgroundColor === "yellow"){
+              results.push("true")
+          } else { 
+              results.push("false")
+          }
+  
+       console.log(results)
+              
+      if (results.length === letters.length && results[i] === "true") {
+          console.log("ok")
+          }
+        }
+      };
