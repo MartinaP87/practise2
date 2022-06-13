@@ -19,7 +19,7 @@ console.log(pickedWord);
  let boxes = '';
  for (let i = 0; i < pickedWord.length; i++) {
      boxes += `
-     <div class="letters ${i}">
+     <div class="container">
      <h2>${pickedWord[i]}</h2>
      </div>
      `;
@@ -28,6 +28,8 @@ console.log(pickedWord);
  console.log(boxes);
 document.getElementById("game-area").innerHTML = boxes;
 
+let letters = document.getElementsByTagName("h2");
+let letterContainer = document.getElementsByClassName("container")
 /**
  * This function shows the letter in its position if correct 
  * and call change the function incrementWrongAnswer if wrong
@@ -51,11 +53,10 @@ document.getElementById("game-area").innerHTML = boxes;
 let doomed = document.getElementById("theman");
 var n = 0;
 function incrementWrongAnswer() {
-    
     if (n < 7) {
         n++;
         doomed.style.backgroundImage = `url(assets/images/img${n}.png)`;
-        if (n === 6){
+        if (n === 7){
          doomed.style.backgroundColor = "red";
          console.log("wrong");
          }
