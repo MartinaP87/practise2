@@ -33,22 +33,36 @@ document.getElementById("game-area").innerHTML = boxes;
  * and call change the function incrementWrongAnswer if wrong
  */
  function keyPressed(event) {
-     for (i = 0; i < pickedWord.length; i++) {
-    
-       if (pickedWord.includes(event.key)) { 
-              console.log("true");
-           if (event.key === pickedWord[i]) { 
-              letters[i].style.visibility = "visible";
-              }
-        } else {
-          incrementWrongAnswer()
-        } 
+    if (pickedWord.includes(event.key)) { 
+      console.log("true");
+      for (i = 0; i < pickedWord.length; i++) {   
+        if (event.key === pickedWord[i]) { 
+        letters[i].style.visibility = "visible";
+        letterContainer[i].style.backgroundColor = "yellow"
+        }
+      } 
+    } else {
+     incrementWrongAnswer()
       }
-    };
+  };
+
+
     // This function change the image every time the answer is wrong
-    function incrementWrongAnswer() {
-        console.log("no")
-    };
+let doomed = document.getElementById("theman");
+var n = 0;
+function incrementWrongAnswer() {
+    
+    if (n < 7) {
+        n++;
+        doomed.style.backgroundImage = `url(assets/images/img${n}.png)`;
+        if (n === 6){
+         doomed.style.backgroundColor = "red";
+         console.log("wrong");
+         }
+  
+    console.log(n);   
+    }
+};
 
    // This function tells the user when the game is won
    function victory(event) {
