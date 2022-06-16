@@ -1,24 +1,109 @@
-.container {
-    color: white;
+/*Fonts imported from Google Fonts (https://fonts.google.com/)*/
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Schoolbell&display=swap');
+
+/* Body element styling */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;    
+}   
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Finger Paint", cursive;
+    font-size: 300%;
+    text-align: center;
+    padding-bottom: 3rem;
+}    
+h2, h3, h4{
+    font-family: Schoolbell, cursive;
+    color: black;   
+    text-align: center; 
+    font-size: 150%;
+}
+
+#input-box {
+    background-image: url(../images/input-background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25%;
+    height: 20rem;
+    float: left;
+    margin-top: 6rem;
+    margin-left: 30px;  
+}
+#input-box > h2 {
+    font-size: 180%;
+   padding-top: 2rem; 
+}
+#input-box > h3 {
+    padding: 40px; 
+    font-size: 150%;
+ }
+ 
+#theman {
+    background-image: url(../images/img0.png);
+    width: 38%;
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    display: inline-block;
+}
+#final-message {
+    display: none;
+    width: 40%;
+    height: 30rem;
+    text-align: center;
+    margin-right: 30px;
+    padding-top: 70px;
+    float: right;   
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#final-message > h3 {
+    padding: 20px 40px;
+}
+#final-message > p {
+    padding-top : 10px;
+    padding-bottom: 20px;
+}
+#boxes-area {
+    padding-top: 50px;
+    display: block;
+    text-align: center;
+}
+.letter-container {
     width: 50px;
     height: 50px;
-    border: 1px solid grey;
-    border-radius: 4px;
-    background-color: blue;
+    background-image: url(../images/space.png);
+    background-size: contain;
     margin: 2px;
     display: inline-block;
     text-align: center;
 }
-h2 {
+.word-letter {
     visibility: hidden;
-    color:black;
+    text-transform: uppercase;
 }
-#theman {
-    
-    background-image: url(../images/img0.png);
-    width: 40%;
-    height: 300px;
+.restart {
+    height: 50px;
+    width: 80%;
+    background-image: url(../images/rubber.png);
     background-repeat: no-repeat;
-    padding: 30px;
-    text-align: center;
+    background-size: 70%;
+    background-position: center;
+    padding-top: 15px;
+   
+}
+.restart > a {
+    padding-top: 5px;
+    font-family: "Finger Paint", cursive;
+    text-transform: uppercase;
+    color: black;
 }
