@@ -69,9 +69,13 @@ h2, h3, h4{
 #final-message > h3 {
     padding: 20px 40px;
 }
+#final-message > h4 {
+    font-family: 'Times New Roman', Times, serif;
+}
 #final-message > p {
-    padding-top : 10px;
-    padding-bottom: 20px;
+    padding : 10px 40px 20px 40px;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 #boxes-area {
     padding-top: 50px;
