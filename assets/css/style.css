@@ -75,16 +75,19 @@ img{
     display: inline-block;
     margin-top: 2rem;
 }
-#final-message {
+#last-window {
     display: none;
     width: 35%;
     height: 29rem;
+    float: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: "url(assets/images/piece.png)";
+}
+#final-message {
     text-align: center;
     margin-right: 10px;
     padding-top: 70px;
-    float: right;   
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 #final-message > h3 {
     padding: 20px 50px 0 40px;
@@ -94,8 +97,17 @@ img{
 }
 #final-message > p {
     padding : 10px 70px 20px 40px;
-    font-family: 'Times New Roman', Times, serif;
-    
+    font-family: 'Times New Roman', Times, serif;    
+}
+#restart {
+    height: 50px;
+    width: 80%;
+    background-image: url(../images/rubber.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    padding-top: 15px;
+   
 }
 #boxes-area {
     padding-top: 50px;
@@ -115,19 +127,5 @@ img{
     visibility: hidden;
     text-transform: uppercase;
 }
-.restart {
-    height: 50px;
-    width: 80%;
-    background-image: url(../images/rubber.png);
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: center;
-    padding-top: 15px;
-   
-}
-.restart > a {
-    padding-top: 5px;
-    font-family: "Finger Paint", cursive;
-    text-transform: uppercase;
-    color: black;
-}
+
+
