@@ -47,7 +47,7 @@ img{
     width: 25%;
     height: 20rem;
     float: left;
-    margin: 3rem 0 0 3rem;
+    margin-left: 3rem;
     padding: 70px;  
 }
 #input-box > h2 {
@@ -82,7 +82,8 @@ img{
     float: right;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: "url(assets/images/piece.png)";
+    background-image: url(../images/piece.png);
+    text-align: center;
 }
 #final-message {
     text-align: center;
@@ -100,14 +101,15 @@ img{
     font-family: 'Times New Roman', Times, serif;    
 }
 #restart {
-    height: 50px;
-    width: 80%;
+    height: 12%;
+    width: 40%;
     background-image: url(../images/rubber.png);
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: contain;
     background-position: center;
-    padding-top: 15px;
-   
+    font-family: 'Finger Paint';
+    text-transform: uppercase;
+    font-size: inherit;
 }
 #boxes-area {
     padding-top: 50px;
