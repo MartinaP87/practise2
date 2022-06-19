@@ -84,7 +84,8 @@ window.onload = function() {
   let finalMessageBox = document.getElementById("final-message");
   let lastWindow = document.getElementById("last-window");
   let playAgain = document.getElementById("restart");
-  let n = 0;
+  let numberOfAttempts = 0;
+  const maxNumberOfAttempts = 7
   // Add event listener to the body
   document.body.addEventListener("keypress", keyPressed); 
   //Add event listener to button
@@ -93,10 +94,25 @@ window.onload = function() {
   /**
    * Function that picks a random object from the wordsList array.
    */
+
   function pickObject() {
     let ind1 = Math.floor(Math.random() * wordsList.length);
+    console.log(wordsList[ind1])
     return wordsList[ind1];
   }
+
+   /**
+   * Remove the chosen object from the wordsList array, 
+   * so it won't appear in the next game
+   */
+  //function removeObject () {
+    //console.log(pickedWord)
+   // console.log(pickedWordMeaning)
+   // let ind1 = wordsList.indexOf(`{word: "${pickedWord}", definition: "${pickedWordMeaning}"}`);
+   // console.log(ind1);
+    //wordsList.splice(ind1, 1);
+   //console.log(wordsList);
+  //}
   /**
    * Main function: it creates divs based on how many letters are in the word of the chosen object;
    * each box has the respective letter in it.
@@ -142,13 +158,14 @@ window.onload = function() {
    * the last image ends the game, resulting in the user's failure.
    */
   function buildHangman() {
-    if (n < 7) {
-      n++;
-      manBox.style.backgroundImage = `url(assets/images/img${n}.png)`;
+    if (numberOfAttempts < maxNumberOfAttempts) {
+      numberOfAttempts++;
+      manBox.style.backgroundImage = `url(assets/images/img${numberOfAttempts}.png)`;
     }
-    if (n === 7) {
+    if (numberOfAttempts === maxNumberOfAttempts) {
       incrementLost();
       changeStyles();
+      removeObject()
       finalMessageBox.innerHTML = `
          <h3>Oh nooo!</h3>
          <h3>You haven't found the word this time... but, if you learn from a loss you have not lost!</h3>
@@ -160,7 +177,9 @@ window.onload = function() {
     }
   }
   
-  // Function that defines when the user wins 
+  /**
+   *  Function that defines when the user wins 
+   */
   function victory() {
     let results = [];
     for (let i = 0; i < letters.length; i++) {
@@ -172,6 +191,7 @@ window.onload = function() {
         if (results.length === letters.length && results[i] === "true" && results.includes("false") === false) {
         incrementWon();
         changeStyles();
+       // removeObject()
         manBox.style.backgroundImage = "url(assets/images/imgvic.png)";
         finalMessageBox.innerHTML = `
           <h3>Congratulations! You found the word!</h3>
@@ -205,11 +225,22 @@ window.onload = function() {
     document.getElementById("lost").innerText = ++lostScore;
   }
   /**
-   * Restarts the game 
-   * resetting the screen to the initial set up,
-   * calling the buildBoxes function (in which is called the pickWord function),
-   * setting new values to the global variables,
-   * and adding the event listener to the body.
+   * Remove the chosen object from the wordsList array, 
+   * so it won't appear in the next game
+   */
+  //function removeObject () {
+    //console.log(pickedWord)
+   // console.log(pickedWordMeaning)
+   // let ind1 = wordsList.indexOf(`{word: "${pickedWord}", definition: "${pickedWordMeaning}"}`);
+   // console.log(ind1);
+    //wordsList.splice(ind1, 1);
+   // console.log(wordsList);
+  //}
+  /**
+   * Restarts the game resetting the screen to the initial set up;
+   * sets new values to the global variables;
+   * calls the buildBoxes function (in which is called the pickWord function);
+   * and adds the event listener to the body.
    */
    function restart () {
     lastWindow.style.display = "none";
@@ -219,10 +250,11 @@ window.onload = function() {
     inputBox.innerHTML = "<h2>Letters tried:</h2>";
     let newChosenObject = pickObject();
     pickedWord = newChosenObject.word;
+    console.log(pickedWord);
     pickedWordMeaning = newChosenObject.definition;
     buildBoxes();
     inputLettersList = [];
-    n = 0;
+    numberOfAttempts = 0;
     document.body.addEventListener("keypress", keyPressed);
   }
 };

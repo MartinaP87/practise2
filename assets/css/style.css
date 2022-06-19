@@ -146,7 +146,6 @@ img{
         width: 20%;
         padding: 5em;  
     }
-    /*Style the contents in the Input Board*/
     #input-box > h2 {
         font-size: 1.5em;
        padding-top: 0px; 
@@ -165,7 +164,6 @@ img{
         padding: 3em;  
         margin-top: 15%;        
     }
-        /*Style the contents in the Input Board*/
     #input-box > h2 {
         font-size: 1em;
     }
@@ -184,18 +182,16 @@ img{
         width: 50%;
         position: absolute;   
     }
-    /*Style the div containing the secret word's letters*/
     #boxes-area {
         position: absolute;
         display: inline-block;
         margin-top: 70%;
+        padding-top: 0px;
     }
-    /*Style the div containing each letter*/
     .letter-container {
         width: 2em;
         height: 2em;
     }
-    /*Style the contents in the Input Board*/
     #input-box > h2 {
         font-size: 80%;
     }
@@ -203,11 +199,9 @@ img{
     #input-box > p {
         font-size: xx-small;
     }
-    /*Style the images of the scores*/
     img{
         height: 2rem;
     }
-    /*Style the score's numbers*/
     .face > span {
         font-size: 100%;
 }
