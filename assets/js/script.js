@@ -195,14 +195,14 @@ window.onload = function() {
   function incrementWon() {
     let wonScore = parseInt(document.getElementById("won").innerText);
     document.getElementById("won").innerText = ++wonScore;
-  };
+  }
   /**
   * Gets the current score of lost games and increments it by 1
   */
   function incrementLost() {
     let lostScore = parseInt(document.getElementById("lost").innerText);
     document.getElementById("lost").innerText = ++lostScore;
-  };
+  }
   /**
    * Restarts the game 
    * resetting the screen to the initial set up,
@@ -211,13 +211,12 @@ window.onload = function() {
    * and adding the event listener to the body.
    */
    function restart () {
-    console.log("bo")
     lastWindow.style.display = "none";
     manBox.style.backgroundImage = "url(assets/images/img0.png)";
-    manBox.style.margin = "2rem 0 0 0"
+    manBox.style.margin = "2rem 0 0 0";
     inputBox.style.display = "inline";
     inputBox.innerHTML = "<h2>Letters tried:</h2>";
-    newChosenObject = pickObject();
+    let newChosenObject = pickObject();
     pickedWord = newChosenObject.word;
     pickedWordMeaning = newChosenObject.definition;
     buildBoxes();
@@ -225,4 +224,4 @@ window.onload = function() {
     n = 0;
     document.body.addEventListener("keypress", keyPressed);
   }
-}
+};
