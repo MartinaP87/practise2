@@ -20,7 +20,7 @@ Hangman's target is adults looking for a short game with no long-term commitment
 - In this section, the user has an explanation of how the game works.
 - This section will desappear when the game starts leaving room for the Input section.
 
-### The Input 
+### The Input Board
 <img src="readme-images/input.png">
 
 - This section appears when the user types its first guessed letter, and it keeps adding each letter typed.

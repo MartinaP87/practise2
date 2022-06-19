@@ -113,6 +113,7 @@ window.onload = function() {
     document.getElementById("boxes-area").innerHTML = boxes;
   }
   buildBoxes();
+  console.log(pickedWord);
   /**
    * Function to check if the key pressed is included in the picked word; 
    * if it is, it reveals it and trigger the victory function,  

@@ -7,12 +7,13 @@
     padding: 0;
     border: none;    
 }   
+/*Style the body*/ 
 body {
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+/*Style the heading*/
 h1 {
     font-family: "Finger Paint", cursive;
     font-size: 300%;
@@ -24,7 +25,7 @@ h2, h3, h4{
     text-align: center; 
     font-size: 150%;
 }
-
+/*Style the images of the scores*/
 img{
     display: inline;
     height: 3rem;
@@ -33,13 +34,14 @@ img{
     display: inline;
     float: right;  
 }
+/*Style the score's numbers*/
 .face > span {
     display: block;
     font-family: "Finger Paint", cursive;
     font-size: 200%;
     text-align: center;
 }
-
+/*Style the Input Board*/
 #input-box {
     background-image: url(../images/input-background.png);
     background-size: contain;
@@ -50,6 +52,7 @@ img{
     margin-left: 3rem;
     padding: 70px;  
 }
+/*Style the contents in the Input Board*/
 #input-box > h2 {
     font-size: 180%;
    padding-top: 1.5rem; 
@@ -63,7 +66,7 @@ img{
     padding: 1rem 3rem; 
     font-size: 110%;
  }
- 
+ /*Style the hangman div*/
 #theman {
     background-image: url(../images/img0.png);
     width: 38%;
@@ -75,6 +78,28 @@ img{
     display: inline-block;
     margin-top: 2rem;
 }
+/*Style the div containing the secret word's letters*/
+#boxes-area {
+    padding-top: 50px;
+    display: block;
+    text-align: center;
+}
+/*Style the div containing each letter*/
+.letter-container {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/space.png);
+    background-size: contain;
+    margin: 2px;
+    display: inline-block;
+    text-align: center;
+}
+/*Style the text of the secret word's letter*/
+.word-letters {
+    visibility: hidden;
+    text-transform: uppercase;
+}
+/*Style the div containig the final message and play again button*/
 #last-window {
     display: none;
     width: 35%;
@@ -90,6 +115,7 @@ img{
     margin-right: 10px;
     padding-top: 70px;
 }
+/*Style the final message contents*/
 #final-message > h3 {
     padding: 20px 50px 0 40px;
 }
@@ -100,6 +126,7 @@ img{
     padding : 10px 70px 20px 40px;
     font-family: 'Times New Roman', Times, serif;    
 }
+/*Style the play again button*/
 #restart {
     height: 12%;
     width: 40%;
@@ -111,23 +138,77 @@ img{
     text-transform: uppercase;
     font-size: inherit;
 }
-#boxes-area {
-    padding-top: 50px;
-    display: block;
-    text-align: center;
-}
-.letter-container {
-    width: 50px;
-    height: 50px;
-    background-image: url(../images/space.png);
-    background-size: contain;
-    margin: 2px;
-    display: inline-block;
-    text-align: center;
-}
-.word-letters {
-    visibility: hidden;
-    text-transform: uppercase;
-}
 
-
+/*Media queries*/
+/* Responsive */
+@media screen and (max-width: 1100px) {
+    #input-box {
+        width: 20%;
+        padding: 5em;  
+    }
+    /*Style the contents in the Input Board*/
+    #input-box > h2 {
+        font-size: 1.5em;
+       padding-top: 0px; 
+    }
+    #input-box > h3 {
+        padding: 20px; 
+        font-size: 150%;
+    }
+     #input-box > p {
+        padding: 0px; 
+        font-size: 1em;
+     }
+    }
+@media screen and (max-width: 900px) {
+    #input-box {
+        padding: 3em;  
+        margin-top: 15%;        
+    }
+        /*Style the contents in the Input Board*/
+    #input-box > h2 {
+        font-size: 1em;
+    }
+    #input-box > h3 {
+        font-size: 1em;
+    } 
+    #input-box > p {
+         font-size: 0.7em;
+    }
+}
+@media screen and (max-width: 650px) {
+    #input-box {
+        margin-left: 0px;          
+    }
+    #theman {
+        width: 50%;
+        position: absolute;   
+    }
+    /*Style the div containing the secret word's letters*/
+    #boxes-area {
+        position: absolute;
+        display: inline-block;
+        margin-top: 70%;
+    }
+    /*Style the div containing each letter*/
+    .letter-container {
+        width: 2em;
+        height: 2em;
+    }
+    /*Style the contents in the Input Board*/
+    #input-box > h2 {
+        font-size: 80%;
+    }
+              
+    #input-box > p {
+        font-size: xx-small;
+    }
+    /*Style the images of the scores*/
+    img{
+        height: 2rem;
+    }
+    /*Style the score's numbers*/
+    .face > span {
+        font-size: 100%;
+}
+}
