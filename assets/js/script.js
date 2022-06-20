@@ -1,4 +1,3 @@
-window.onload = function() { buildBoxes()}
   let wordsList = [
     {word: "absurd", "definition": " Extremely unreasonable, incongruous, or inappropriate. Impossible to take seriously."}, 
     {word: "abyss", definition: "A very deep or unfathomable gorge or chasm. Anything that appears to be endless or immeasurably deep."},
@@ -74,8 +73,8 @@ window.onload = function() { buildBoxes()}
     {word: "wyvern", definition: "A draconian creature possessing wings, only two legs and usually a barbed tail."}
   ];
   //Declare all global variables
-  let indObject = wordsList.indexOf(chosenObject);
   let chosenObject = pickObject();
+  let indObject = wordsList.indexOf(chosenObject);
   let pickedWord = chosenObject.word;
   let pickedWordMeaning = chosenObject.definition;
   let inputBox = document.getElementById("input-box");
@@ -116,8 +115,6 @@ window.onload = function() { buildBoxes()}
     }
     document.getElementById("boxes-area").innerHTML = boxes;
   }
-  buildBoxes();
-  console.log(pickedWord);
   /**
    * Function to check if the key pressed is included in the picked word; 
    * if it is, it reveals it and trigger the victory function,  
@@ -242,3 +239,4 @@ window.onload = function() { buildBoxes()}
     numberOfAttempts = 0;
     document.body.addEventListener("keypress", keyPressed);
   }
+  buildBoxes();
