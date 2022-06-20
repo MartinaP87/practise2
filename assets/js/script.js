@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function() { buildBoxes()}
   let wordsList = [
     {word: "absurd", "definition": " Extremely unreasonable, incongruous, or inappropriate. Impossible to take seriously."}, 
     {word: "abyss", definition: "A very deep or unfathomable gorge or chasm. Anything that appears to be endless or immeasurably deep."},
@@ -74,6 +74,7 @@ window.onload = function() {
     {word: "wyvern", definition: "A draconian creature possessing wings, only two legs and usually a barbed tail."}
   ];
   //Declare all global variables
+  let indObject = wordsList.indexOf(chosenObject);
   let chosenObject = pickObject();
   let pickedWord = chosenObject.word;
   let pickedWordMeaning = chosenObject.definition;
@@ -97,22 +98,9 @@ window.onload = function() {
 
   function pickObject() {
     let ind1 = Math.floor(Math.random() * wordsList.length);
-    console.log(wordsList[ind1])
+    console.log(ind1)
     return wordsList[ind1];
   }
-
-   /**
-   * Remove the chosen object from the wordsList array, 
-   * so it won't appear in the next game
-   */
-  //function removeObject () {
-    //console.log(pickedWord)
-   // console.log(pickedWordMeaning)
-   // let ind1 = wordsList.indexOf(`{word: "${pickedWord}", definition: "${pickedWordMeaning}"}`);
-   // console.log(ind1);
-    //wordsList.splice(ind1, 1);
-   //console.log(wordsList);
-  //}
   /**
    * Main function: it creates divs based on how many letters are in the word of the chosen object;
    * each box has the respective letter in it.
@@ -191,7 +179,7 @@ window.onload = function() {
         if (results.length === letters.length && results[i] === "true" && results.includes("false") === false) {
         incrementWon();
         changeStyles();
-       // removeObject()
+        removeObject();
         manBox.style.backgroundImage = "url(assets/images/imgvic.png)";
         finalMessageBox.innerHTML = `
           <h3>Congratulations! You found the word!</h3>
@@ -228,14 +216,9 @@ window.onload = function() {
    * Remove the chosen object from the wordsList array, 
    * so it won't appear in the next game
    */
-  //function removeObject () {
-    //console.log(pickedWord)
-   // console.log(pickedWordMeaning)
-   // let ind1 = wordsList.indexOf(`{word: "${pickedWord}", definition: "${pickedWordMeaning}"}`);
-   // console.log(ind1);
-    //wordsList.splice(ind1, 1);
-   // console.log(wordsList);
-  //}
+   function removeObject () {
+    wordsList.splice(indObject, 1);
+  }
   /**
    * Restarts the game resetting the screen to the initial set up;
    * sets new values to the global variables;
@@ -249,6 +232,8 @@ window.onload = function() {
     inputBox.style.display = "inline";
     inputBox.innerHTML = "<h2>Letters tried:</h2>";
     let newChosenObject = pickObject();
+    indObject = wordsList.indexOf(newChosenObject);
+    console.log(indObject);
     pickedWord = newChosenObject.word;
     console.log(pickedWord);
     pickedWordMeaning = newChosenObject.definition;
@@ -257,4 +242,3 @@ window.onload = function() {
     numberOfAttempts = 0;
     document.body.addEventListener("keypress", keyPressed);
   }
-};
