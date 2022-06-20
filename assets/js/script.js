@@ -152,9 +152,7 @@
       changeStyles();
       removeObject()
       finalMessageBox.innerHTML = `
-         <h3>Oh nooo!</h3>
-         <h3>You haven't found the word this time... but, if you learn from a loss you have not lost!</h3>
-         <h3>The word was:</h3>
+         <h3>Oh nooo!<br>You haven't found the word this time... but, if you learn from a loss you have not lost!<br>The word was:</h3>
          <h4><strong>${pickedWord}:</strong></h4>  
          <p><em>${pickedWordMeaning}</em></p>
           `;
@@ -188,14 +186,6 @@
     }
   }
   /**
-   * Sets new styling properties when the game is over
-   */
-  function changeStyles() {
-    manBox.style.margin = "70px 0px 0px 15%";
-    inputBox.style.display = "none";
-    lastWindow.style.display = "inline";
-  }
-  /**
    * Gets the current score of won games and increments it by 1
    */
   function incrementWon() {
@@ -208,6 +198,16 @@
   function incrementLost() {
     let lostScore = parseInt(document.getElementById("lost").innerText);
     document.getElementById("lost").innerText = ++lostScore;
+  }
+ /**
+  * Sets new styling properties when the game is over
+  */
+  function changeStyles() {
+    manBox.style.margin = "15% 0 0 40%";
+    manBox.style.width = "45%";
+    manBox.style.height = "50vw";
+    inputBox.style.display = "none";
+    lastWindow.style.display = "inline";
   }
   /**
    * Remove the chosen object from the wordsList array, 
@@ -225,7 +225,7 @@
    function restart () {
     lastWindow.style.display = "none";
     manBox.style.backgroundImage = "url(assets/images/img0.png)";
-    manBox.style.margin = "2rem 0 0 0";
+    manBox.style.margin = "0px 15% 0 40%";
     inputBox.style.display = "inline";
     inputBox.innerHTML = "<h2>Letters tried:</h2>";
     let newChosenObject = pickObject();

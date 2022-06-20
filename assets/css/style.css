@@ -1,208 +1,199 @@
 /*Fonts imported from Google Fonts (https://fonts.google.com/)*/
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Schoolbell&display=swap');
 
-/* Body element styling */
+/* Body element styling;*/
 * {
     margin: 0;
     padding: 0;
     border: none;    
 }   
-/*Style the body*/ 
 body {
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Schoolbell, cursive;
+    color: black;
 }
-/*Style the heading*/
+/*Style the header;*/
 h1 {
     font-family: "Finger Paint", cursive;
-    font-size: 300%;
+    font-size: 5vw;
     text-align: center;
+    padding: 1% 0;
 }    
-h2, h3, h4{
-    font-family: Schoolbell, cursive;
-    color: black;   
-    text-align: center; 
-    font-size: 150%;
-}
-/*Style the images of the scores*/
+/*Style the images of the scores;*/
 img{
     display: inline;
-    height: 3rem;
+    height: 7vw;
 }
 .face {
     display: inline;
     float: right;  
 }
-/*Style the score's numbers*/
+/*Style the score's numbers;*/
 .face > span {
     display: block;
     font-family: "Finger Paint", cursive;
-    font-size: 200%;
+    font-size: 4vw;
     text-align: center;
 }
-/*Style the Input Board*/
+/*Style the box containing the istructions and the typed letters;*/
 #input-box {
     background-image: url(../images/input-background.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 25%;
-    height: 20rem;
-    float: left;
-    margin-left: 3rem;
-    padding: 70px;  
+    width: 30%;
+    height: 30vw;
+    position: absolute;
 }
-/*Style the contents in the Input Board*/
+/*Style the titles of typing area and of the instructions area;*/
 #input-box > h2 {
-    font-size: 180%;
-   padding-top: 1.5rem; 
+   font-size: 3vw;
+   padding-left: 20%;
+   padding-top: 10%; 
 }
-#input-box > h3 {
-    padding: 40px; 
-    font-size: 200%;
+/*Style typed letters;*/
+#input-box > h3 { 
+    font-size: 3vw;
+    padding: 5px 7.5vw 0 8vw;
  }
- #input-box > p {
-    font-family: Schoolbell, cursive;
-    padding: 1rem 3rem; 
-    font-size: 110%;
- }
- /*Style the hangman div*/
+ /*Style instructions;*/
+#input-box > p {
+    padding: 5px 5vw 0 6vw;
+    font-size: 1.5vw;
+    margin-top: 0;
+    margin-left: 2%; 
+}
+/*Style the hangman area;*/
 #theman {
     background-image: url(../images/img0.png);
-    width: 38%;
-    height: 25rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    text-align: center;
-    display: inline-block;
-    margin-top: 2rem;
+    width: 30%;
+    height: 38vw;
+    margin: 0px 15% 0 40%;
 }
-/*Style the div containing the secret word's letters*/
+/*Style the div containing the sicret word;*/
 #boxes-area {
-    padding-top: 50px;
+    padding-top: 10px;
     display: block;
     text-align: center;
+    margin-bottom: 100%;
 }
-/*Style the div containing each letter*/
+/*Style the divs containing the sicret word's letters;*/
 .letter-container {
-    width: 50px;
-    height: 50px;
+    width: 6%;
+    height: 6vw;
     background-image: url(../images/space.png);
     background-size: contain;
     margin: 2px;
     display: inline-block;
     text-align: center;
 }
-/*Style the text of the secret word's letter*/
+/*Style the secret word's letters;*/
 .word-letters {
     visibility: hidden;
     text-transform: uppercase;
+    font-size: 5vw;
 }
-/*Style the div containig the final message and play again button*/
+/*Style the window that pops up when the game is over;*/
 #last-window {
     display: none;
     width: 35%;
-    height: 29rem;
-    float: right;
+    height: 45vw;
+    position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../images/piece.png);
     text-align: center;
+    margin-top: 5vw;
 }
+/*Style the div containing all the text in the final window;*/
 #final-message {
     text-align: center;
-    margin-right: 10px;
-    padding-top: 70px;
+    margin: 0 6vw 0 3vw;
+    padding-top: 7vw; 
 }
-/*Style the final message contents*/
-#final-message > h3 {
-    padding: 20px 50px 0 40px;
+/*Style the final message text contents*/
+#final-message > h3, h4, p {
+    font-size: 2.3vw;
 }
 #final-message > h4 {
     font-family: 'Times New Roman', Times, serif;
 }
 #final-message > p {
-    padding : 10px 70px 20px 40px;
-    font-family: 'Times New Roman', Times, serif;    
+    padding: 5% 0 15% 0;
+    font-family: 'Times New Roman', Times, serif;   
 }
 /*Style the play again button*/
 #restart {
-    height: 12%;
-    width: 40%;
+    height: 15%;
+    width: 24vw;
     background-image: url(../images/rubber.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 105%;
     background-position: center;
+    border-radius: 13%;
     font-family: 'Finger Paint';
     text-transform: uppercase;
-    font-size: inherit;
+    font-size: 2.7vw;
 }
 
+
 /*Media queries*/
-/* Responsive */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 500px) {
+    /* Responsive heading*/
+    h1 {
+        padding-bottom: 0px;
+    }   
+    /* Responsive box containing the istructions and the typed letters */ 
     #input-box {
-        width: 20%;
-        padding: 5em;  
+        width: 140px;
+        height: 140px;
+        margin: 60% 30vw;
     }
+    /* Responsive titles of typing area and of the instructions area. */
     #input-box > h2 {
-        font-size: 1.5em;
-       padding-top: 0px; 
-    }
-    #input-box > h3 {
-        padding: 20px; 
-        font-size: 150%;
-    }
-     #input-box > p {
-        padding: 0px; 
-        font-size: 1em;
-     }
-    }
-@media screen and (max-width: 900px) {
-    #input-box {
-        padding: 3em;  
-        margin-top: 15%;        
-    }
-    #input-box > h2 {
-        font-size: 1em;
-    }
-    #input-box > h3 {
-        font-size: 1em;
-    } 
-    #input-box > p {
-         font-size: 0.7em;
-    }
-}
-@media screen and (max-width: 650px) {
-    #input-box {
-        margin-left: 0px;          
-    }
-    #theman {
-        width: 50%;
-        position: absolute;   
-    }
-    #boxes-area {
-        position: absolute;
-        display: inline-block;
-        margin-top: 70%;
-        padding-top: 0px;
-    }
-    .letter-container {
-        width: 2em;
-        height: 2em;
-    }
-    #input-box > h2 {
-        font-size: 80%;
-    }
-              
-    #input-box > p {
-        font-size: xx-small;
-    }
-    img{
-        height: 2rem;
-    }
-    .face > span {
         font-size: 100%;
-}
+       padding: 15px 0px 0px 30px; 
+    }
+    /* Responsive typed letters,*/
+    #input-box > h3 {
+        padding-top: 20px;
+        font-size: 100%;
+    }
+    /* Responsive instructions,*/
+    #input-box > p {
+        padding: 5px 15px 0 25px;
+        font-size: 50%;
+     } 
+     /* Responsive divs containing the sicret word's letters;*/
+    .letter-container {
+        margin: 1px;
+        padding-bottom: 5px;
+    }
+    /* Responsive window that pops up when the game is over;*/
+    #last-window {
+        width: 75%;
+        height: 90vw;
+        margin-top: 71% 0 20% 20%;
+    }
+    #final-message {
+        padding-top: 14vw;
+        margin: 0 13vw 0 9vw;
+    }
+    /* Responsive final message text contents;*/
+    #final-message > h3 {
+        font-size: 3.5vw;
+    }
+    #final-message > p {
+        font-size: 4vw;   
+    }
+    /* Responsive play again button;*/
+    #restart {
+        height: 11%;
+        width: 35vw;
+        font-size: 4vw;
+    }
 }
