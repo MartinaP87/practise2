@@ -56,3 +56,140 @@ Hangman's target is adults looking for a short game with no long-term commitment
 - This clickable button restarts the game without affecting the scores.
 It resets the hangman, the input section, and along with the word, it updates the underscore section.
 - This button is displayed when the game is over and allows the user to play again.
+
+## Testing:
+Testing: 
+- The project has been tested on different browsers to ensure the website functions correctly, and the results are satisfactory in Chrome, Safari, Opera, and Firefox. 
+- I can confirm that the website is responsive after going through all the standard portals available in dev tools. 
+<table>
+<thead>
+<tr>
+<th>Action or Happening</th>
+<th>Expected Result</th>
+<th>Successful?<th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Click on website url</td>
+<td>Open the landing page</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Type any key</td>
+<td>Key appears in the input window</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Type any key</td>
+<td>If the secret word includes the key, it appears in its space</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Type any key</td>
+<td>If the secret word does not include the key, start to build the hangman</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>The user loses the game</td>
+<td>Show the final message and play again button</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>The user loses the game</td>
+<td>Increase the lost game score</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>The user wins the game</td>
+<td>Show the final message and the play again button</td>
+<td>Yes</td>
+</tr>
+<td>The user wins the game</td>
+<td>Increase the won game score</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>The game is over</td>
+<td>Remove the object containing the word from the list of candidates for the next game</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>The game is over</td>
+<td>Stop taking any key</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Click on the play again button</td>
+<td>Start a new game</td>
+<td>Yes</td>
+</tr>
+<tr>
+</tbody>
+</table>
+
+- All the pages went through Lighthouse in dev tools, giving positive results for readability, color contrast, and accessibility:
+
+
+### Validator Testing:
+- HTML
+No errors were returned when passing through the official [W3C validator]();
+- CSS
+No errors were found when passing through the official [(Jigsaw) validator]();
+- JSHint
+No errors were found when passing through the official [(JSHint) validator](), 
+even though some warning messages have been detected due to the usage of 'template literal syntax'.
+<img src ="readme-images/jshint.png">
+
+## Bugs:
+Sometimes, when opening the website on the browser, the footer background image and the main image on the sign-up page wouldn’t load properly.
+
+I then tried reducing the size through a compression tool and changed the format from jpg to webp.
+The drastic size reduction corrected the issue and bettered the performance of the page.
+## Deployment:
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+- In the GitHub repository, navigate to the Settings tab;
+- On the menu on the left, under Code and Automation, click on Pages;
+- From the source section drop-down menu, select the Main Branch;
+- Once the main branch has been selected, click on Save;
+- At the top of the page will then appear the message “Your site is ready to be published at” and the URL;
+- Refresh the page and the message will change to “Your site is published at” and the active URL.
+- The live link can be found here - 
+
+### Local Deployment:
+To work on the code from a local device, the steps to clone the repository are as follows:
+
+- In the GitHub repository click the Code button, above the list of files;
+- Copy the URL displayed on the clone tab;
+- Open the terminal on your device;
+- Type git clone and paste the URL copied earlier;
+ - Press enter.
+## Credit:
+
+Some of the structure and contents for the README.md file Love Running.
+
+- Media
+The images were taken from:
+
+Pexels;
+
+Shutterstock;
+
+Unsplash;
+
+Pixabay;
+
+The images were compressed in Tinyjpg;
+
+The images were converted in Ezgif;
+
+The map was taken from Google maps;
+
+The screenshot of the website on different ports was from Mockup screen generator;
+
+The fonts were taken from Google Fonts;
+
+The icons were taken from Font Awesome.
+
+

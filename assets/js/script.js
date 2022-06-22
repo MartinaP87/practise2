@@ -85,7 +85,7 @@
   let lastWindow = document.getElementById("last-window");
   let playAgain = document.getElementById("restart");
   let numberOfAttempts = 0;
-  const maxNumberOfAttempts = 7
+  const maxNumberOfAttempts = 7;
   // Add event listener to the body
   document.body.addEventListener("keypress", keyPressed); 
   //Add event listener to button
@@ -97,7 +97,7 @@
 
   function pickObject() {
     let ind1 = Math.floor(Math.random() * wordsList.length);
-    console.log(ind1)
+    console.log(ind1);
     return wordsList[ind1];
   }
   /**
@@ -105,6 +105,7 @@
    * each box has the respective letter in it.
    */
   function buildBoxes() {
+    console.log(pickedWord);
     let boxes = '';
     for (let i = 0; i < pickedWord.length; i++) {
       boxes += `
@@ -215,6 +216,7 @@
    */
    function removeObject () {
     wordsList.splice(indObject, 1);
+    console.log(wordsList);
   }
   /**
    * Restarts the game resetting the screen to the initial set up;
