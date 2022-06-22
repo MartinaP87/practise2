@@ -1,58 +1,48 @@
 # HANGMAN
-View the live project here 
+[View the live project here]()
 
 Hangman is a classic word game. This game is a fun way of learning vocabulary, and it's especially useful for remembering the spelling of new words.  
-
 The website's goal is to provide a challenging, educational game to entertain the online user. 
-
 Hangman's target is adults looking for a short game with no long-term commitments, something familiar that brings back memories of the good old days, and young adults keen to learn new words in a fun way.  
 
 ##FEATURES:
 
 ### The Landing Page
  <img src ="readme-images/landing-page.png">
-
 - The page landing includes a background image with all the other features overlaid to allow the user to see the content of the site.
 
 ### The Instructions
 <img src="readme-images/instructions.png">
-
 - In this section, the user has an explanation of how the game works.
 - This section will desappear when the game starts leaving room for the Input section.
 
 ### The Input Board
 <img src="readme-images/input.png">
-
 - This section appears when the user types its first guessed letter, and it keeps adding each letter typed.
 - This part is a reminder of the letters typed, and it helps the user to proceed with the game without making the same mistakes.
 
 ### The Hangman
 <img src="readme-images/hangman.png">
-
 - This section changes the background every time the user types the wrong letter building the "hangman"; when the hangman is complete, the game is over, and the user loses. However, if the user guesses the word before then, it will display the victory background image.
 - From this feature, the user can see how close he/she is to lose the game.
 
 ### The Score
 <img src="readme-images/scores.png">
-
 - The score will update every time the game is over: if the user wins, the score under the happy face will increase by 1; if the user loses, the score under the sad face will increase by 1.
 - From this feature, the user can see how many games have been lost or won.
 
 ### The Underscores
 <img src="readme-images/letters.png">
-
 - This section generates every time the game is loaded. Every underscore represents a letter of the chosen word. When the user guesses the correct letter, it gets displayed in the respective space.
 - From this feature, the user can see how long the word is and, through correct guessings,  the letter's position. This section helps the user to win the game.
 
 ### The Final Message
 <img src="readme-images/final-message.png">
-
 - This section pops up when the game is over. If the user wins, it shows a message of congratulations, otherwise of encouragement. Either way, below the statement, it displays the secret word, its definition, and the "play again!" button.
 - This section acknowledges the user of the game's result and enriches the user's vocabulary by defining the meaning of the word that could have been previously unknown. 
 
 ### The "Play Again!" Button
 <img src="readme-images/restart.png">
-
 - This clickable button restarts the game without affecting the scores.
 It resets the hangman, the input section, and along with the word, it updates the underscore section.
 - This button is displayed when the game is over and allows the user to play again.
@@ -146,50 +136,37 @@ Sometimes, when opening the website on the browser, the footer background image 
 
 I then tried reducing the size through a compression tool and changed the format from jpg to webp.
 The drastic size reduction corrected the issue and bettered the performance of the page.
+
 ## Deployment:
 The site was deployed to GitHub pages. The steps to deploy are as follows:
-
 - In the GitHub repository, navigate to the Settings tab;
 - On the menu on the left, under Code and Automation, click on Pages;
 - From the source section drop-down menu, select the Main Branch;
 - Once the main branch has been selected, click on Save;
 - At the top of the page will then appear the message “Your site is ready to be published at” and the URL;
-- Refresh the page and the message will change to “Your site is published at” and the active URL.
+- Refresh the page, and the message will change to “Your site is published at” and the active URL.
 - The live link can be found here - 
 
 ### Local Deployment:
 To work on the code from a local device, the steps to clone the repository are as follows:
-
-- In the GitHub repository click the Code button, above the list of files;
+- In the GitHub repository click the Code button above the list of files;
 - Copy the URL displayed on the clone tab;
 - Open the terminal on your device;
 - Type git clone and paste the URL copied earlier;
- - Press enter.
+- Press enter.
+
 ## Credit:
+Some of the structure and contents for the README.md file were taken from the Tastes Of Autumn project.
 
-Some of the structure and contents for the README.md file Love Running.
-
-- Media
+### Media
 The images were taken from:
-
-Pexels;
-
-Shutterstock;
-
-Unsplash;
-
-Pixabay;
-
-The images were compressed in Tinyjpg;
-
-The images were converted in Ezgif;
-
-The map was taken from Google maps;
-
-The screenshot of the website on different ports was from Mockup screen generator;
-
-The fonts were taken from Google Fonts;
-
-The icons were taken from Font Awesome.
-
-
+- [Shutterstock](https://www.shutterstock.com/image-photo/wooden-color-pencils-on-white-paper-1005954823) for the body background;
+- [Shutterstock](https://www.shutterstock.com/image-photo/close-white-ripped-piece-paper-on-226006654) for the final message background;
+- [Pexels](https://www.pexels.com/it-it/foto/gomma-da-cancellare-pelikan-br-40-rossa-e-blu-su-superficie-bianca-35202/) for the play again button;
+- The developer drew the background images of the hangman.
+- The screenshot of the website on different ports was from [Mockup screen generator](https://ui.dev/amiresponsive);
+- The fonts were taken from [Google Fonts](https://fonts.google.com/);
+- The favicons was generated and taken from [Faviocon](https://favicon.io/)];
+- The words were taken from a list in [hangmanwords](https://www.hangmanwords.com/words)
+- The words definitions were taken from [Wictionary](https://en.wiktionary.org/wiki/Wiktionary:Main_Page).
+- The body background image was compressed in [Tinyjpg](https://tinyjpg.com/);
